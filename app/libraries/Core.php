@@ -21,7 +21,7 @@ class Core {
 
     // Instantiate controller class
     $this->currentController = new $this->currentController;
-    
+
     // print_r($this->currentController);
     // Check for second part of url
     if(isset($url[1])){
@@ -32,12 +32,12 @@ class Core {
         unset($url[1]);
       }
     }
-    echo '</br>';
-    echo $this->currentMethod;
+    // echo '</br>';
+    // echo $this->currentMethod;
     // Get params
     $this->params = $url ? array_values($url) : [];
-    echo '</br>';
-    print_r($this->params);
+    // echo '</br>';
+    // print_r($this->params);
     // Call a callback with array of params
     call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
   }

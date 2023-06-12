@@ -1,6 +1,9 @@
 <?php 
 // Load Config
 require_once 'config/config.php';
+
+// Load Helpers
+require_once 'helpers/helper.php';
 //  Load libraries
 // require_once '../app/libraries/core.php';
 // require_once '../app/libraries/controller.php';

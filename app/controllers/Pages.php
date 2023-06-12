@@ -8,6 +8,7 @@ class Pages extends Controller {
   public function index(){
     $posts = $this->postModel->getPosts();
     $data=['title'=>'hello I am YugoMVC',
+    'description'=>'Simple social network built on the YugoMVC PHP framework, version 1.0.0',
     'posts'=>$posts];
 
     // echo 'index';

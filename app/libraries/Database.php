@@ -15,7 +15,7 @@ class Database {
     // Create PDO instance
     try {
       $this->dbh = new PDO($dsn,$this->user,$this->pass);
-      echo 'DB Connected';
+      // echo 'DB Connected';
     } catch(PDOException $e) {
       $this->error = $e->getMessage();
       exit('DB Connection Error:'.$this->error);
@@ -62,5 +62,10 @@ class Database {
   public function single() {
     $this->execute();
     return $this->stmt->fetch(PDO::FETCH_OBJ);
+  }
+
+  // Get row count
+  public function rowCount() {
+    return $this->stmt->rowCount();
   }
 }
